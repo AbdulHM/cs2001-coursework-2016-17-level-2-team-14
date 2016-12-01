@@ -6,9 +6,7 @@
 
 _Information about our project can be found here._
 
-Tasks appointed to us during our last meeting on 19/10/2016:
-- Get new member of our group added to our Whatsapp group chat.  
-- Work on git to get used to it.
+Check out what we need to do <a href="https://github.com/BrunelCS/cs2001-coursework-2016-17-level-2-team-14/projects/2">here</a>.
 
 ------------------------------------
 READ THIS BEFORE MAKING CHANGES TO THE PROJECT
