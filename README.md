@@ -11,6 +11,7 @@ Tasks appointed to us during our last meeting on 30/11/2016:
 - Get through Udacity tutorials for Android Studios.  
 - Finish off prototype design - Due 9th December 2016.  
 - Check out what we need to do <a href="https://github.com/BrunelCS/cs2001-coursework-2016-17-level-2-team-14/projects/2">here</a>.
+- Prototype Design is <a href="https://marvelapp.com/project/1056614/">here</a>.
 
 ------------------------------------
 READ THIS BEFORE MAKING CHANGES TO THE PROJECT
