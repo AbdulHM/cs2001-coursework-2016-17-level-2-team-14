@@ -1,9 +1,9 @@
 Image 6 (marvel prototype)
 
-Add a home button to top bar for easy access
+Add a home button to the top bar for easy access
 Image icon will be the users profile who has uploaded that recipe - This will consist of their picture, about and some of their other recipe images
 Brief description box underneath the picture of the dish
 Ingredients box - Once clicked on this will expand and show all of the ingredients. Any ingredients that the user needs will be able to be added to the shopping list with ease and simplicity
 Box below that will have the method for the recipe
-Bottom of the page will have an 'add to favourites option' which will be a heart. This will highlight red once selected to show the user it has been selected
-'Share button' underneath or next to the add to favourites button
+Bottom of the page will have an 'add to favourites option' which will be a heart. This will highlight red once selected to show the user it has been selected. This will also have a number counter in the icon to show how many times it has been added to favourites
+'Share button' underneath or next to the 'add to favourites' button
