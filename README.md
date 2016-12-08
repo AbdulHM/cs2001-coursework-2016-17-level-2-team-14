@@ -6,8 +6,8 @@
 
 _Information about our project can be found here._
 
-Tasks appointed to us during our last meeting on 30/11/2016:
-- Make a To-do list.  
+Tasks appointed to us during our last meeting on 07/12/2016:
+- Complete and send off peer assessment forms.
 - Get through Udacity tutorials for Android Studios.  
 - Finish off prototype design - Due 9th December 2016.  
 - Check out what we need to do <a href="https://github.com/BrunelCS/cs2001-coursework-2016-17-level-2-team-14/projects/2">here</a>.
