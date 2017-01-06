@@ -1,0 +1,23 @@
+I(daniel) have a few friend that work as cooks, so I was thinking that I would ask them what they want from a app aboutr cooking, I how ever cant think of any good questions.
+
+Question to be asked
+	-Would you want to have review of respice on the app?
+	*I think we discussed this in the group and agreed that we would have reviews for each recipe. I'll confirm this and get back to you.
+	
+	-Would you want to be able to search be what ingreadens you have?
+	*This was something we discussed too. Need to confirm with the group but I believe that you will be able to do so.
+	
+	-Would you use a app on you phone to find respices?
+	*Yes. Apps are quick and convenient as opposed to opening up a web browser and surfing through different pages.
+	
+	-If yes, what app do you use and why?
+	*Mentioned above
+	
+	-Would you like to see what the dish should look like?
+	*Yes. So we could implement a feature to upload a picture of the dish once completed.
+	
+	-How would you like to search all the dishs?
+	*We could either do an ingredient search, or search based on what type of dish i.e Chinese, Curry.. Etc
+	
+	-What kind of featcher would you want in this app?
+	*Finding a recipe, posting your own recipe, posting a picture of the recipe, sharing recipes on social networking sites such as Twitter or Facebook.
