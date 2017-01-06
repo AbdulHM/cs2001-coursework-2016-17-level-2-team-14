@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">RecipMe</string>
-    <string name="users_name">Users name</string>
+    <string name="login_username_or_email">Username or Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_sign_in">Sign in</string>
+    <string name="login_need_an_account">Need an account?</string>
+    <string name="login_create_an_account_now"><u><![CDATA[Create an account now >]]></u></string>
+    <string name="register_title">Create an account.</string>
+    <string name="register_username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

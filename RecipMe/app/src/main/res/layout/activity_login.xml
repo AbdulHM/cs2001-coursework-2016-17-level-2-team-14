@@ -6,34 +6,57 @@
     android:padding="10dp"
     android:layout_width="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
 
     <EditText
-        android:id="@+id/edit_text_username"
+        android:id="@+id/login_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginButton="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password" />
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/login_username_or_email"/>
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/login_password"
         android:layout_width="match_parent"
-        android:layout_marginButton="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="16dp"
         android:inputType="textPassword"
-        android:layout_height="wrap_content"/>
+        android:hint="@string/password"/>
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="@string/sign_in"
+        android:onClick="LoginButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:text="@string/login_need_an_account"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="48dp"
+        android:text="@string/login_create_an_account_now"
+        android:onClick="CreateAccount"/>
 
 
 

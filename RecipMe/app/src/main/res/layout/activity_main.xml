@@ -1,51 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:layout_width="match_parent">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="group14.brunel.recipme.MainActivity">
 
     <TextView
-        android:Layout_width="wrap_content"
-        android:text="Name"
-        android:Layout_height="wrap_cotent"/>
-
-    <EditText
-        android:id="@+id/etName"
-        android:Layout_width="match_parent"
-        android:Layout_marginButton="10dp"
-        android:Layout_height="wrap_content"/>
-    <TextView
-        android:Layout_width="wrap_content"
-        android:text="Age"
-        android:Layout_height="wrap_cotent"/>
-
-    <EditText
-        android:id="@+id/etAge"
-        android:Layout_width="match_parent"
-        android:Layout_marginButton="10dp"
-        android:Layout_height="wrap_content"/>
-
-    <TextView
-        android:Layout_width="wrap_content"
-        android:text="Username"
-        android:Layout_height="wrap_cotent"/>
-
-    <EditText
-        android:id="@+id/etUsername"
-        android:Layout_width="match_parent"
-        android:Layout_marginButton="10dp"
-        android:Layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/bLogout"
-        android:texts="Logout"
-        android:Layout_width="match_parent"
-        android:Layout_heights="wrap_content" />
-
-
-
-
-</android.support.design.widget.LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+</RelativeLayout>

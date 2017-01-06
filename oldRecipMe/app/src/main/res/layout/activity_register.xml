@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:Layout_width="wrap_content"
+        android:text="Name"
+        android:Layout_height="wrap_cotent"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:Layout_width="match_parent"
+        android:Layout_marginButton="10dp"
+        android:Layout_height="wrap_content"/>
+    <TextView
+        android:Layout_width="wrap_content"
+        android:text="Age"
+        android:Layout_height="wrap_cotent"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:Layout_width="match_parent"
+        android:Layout_marginButton="10dp"
+        android:Layout_height="wrap_content"/>
+
+    <TextView
+        android:Layout_width="wrap_content"
+        android:text="Username"
+        android:Layout_height="wrap_cotent"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:Layout_width="match_parent"
+        android:Layout_marginButton="10dp"
+        android:Layout_height="wrap_content"/>
+
+    <TextView
+        android:Layout_width="wrap_content"
+        android:text="Password"
+        android:Layout_height="wrap_cotent"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:Layout_width="match_parent"
+        android:Layout_marginButton="10dp"
+        android:inputType="textPassword"
+        android:Layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bRegister"
+        android:texts="Register"
+        android:Layout_width="match_parent"
+        android:Layout_heights="wrap_content" />
+
+
+
+
+</LinearLayout>
