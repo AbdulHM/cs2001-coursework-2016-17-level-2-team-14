@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\jayalam\\AndroidStudioProjects\\GroupProject\\Prototype\\RecipMePrototype\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\jayalam\\AndroidStudioProjects\\GroupProject\\Prototype\\RecipMePrototype\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jayalam\\AndroidStudioProjects\\GroupProject\\Prototype\\RecipMePrototype\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\user_profile_photo.png",
+        "source": "C:\\Users\\jayalam\\AndroidStudioProjects\\GroupProject\\Prototype\\RecipMePrototype\\app\\src\\main\\res\\mipmap-hdpi\\user_profile_photo.png"
+    }
+]
