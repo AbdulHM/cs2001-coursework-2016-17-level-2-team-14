@@ -14,7 +14,7 @@ Tasks appointed to us during our last meeting on 07/12/2016:
 - Prototype Design is <a href="https://marvelapp.com/project/1056614/">here</a>.
 
 ------------------------------------
-READ THIS BEFORE MAKING CHANGES TO THE PROJECT
+FAQ ON GIT
 ------------------------------------
 
 <b>How to clone the project folder?</b>
