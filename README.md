@@ -17,21 +17,27 @@ Tasks appointed to us during our last meeting on 07/12/2016:
 READ THIS BEFORE MAKING CHANGES TO THE PROJECT
 ------------------------------------
 
-If you already have cloned the project to your local drive then you need to follow these steps
-to avoid merge conflicts (when two or more people are working on the project at the same time
-and editing the same line or do similar activities). 
+<b>How to clone the project folder?</b>
 
-1. Fetch and merge changes from the remote <br>
-   <img src="README-img/git-fetch.PNG" height="25" title="retrieve the project from github"><br>
-   <img src="README-img/git-merge.PNG" height="25" title="merge the branch to your local branch master">	
-2. Create a branch to work on a new project feature <br>
-   <img src="README-img/branch.PNG" height="25" title="Create a new branch"><br>
-3. Develop the feature on your branch and commit your work <br>
-   <img src="README-img/git-commit.PNG" height="30">
-4. Fetch and merge from the remote again <br>
-(in case new commits were made while you were working <br>
-but only merge if there's new changes from the github repository) <br>
-   <img src="README-img/git-fetch.PNG" height="25"><br>
-   <img src="README-img/git-merge.PNG" height="25"><br>
-5. Push your branch up to the remote for review <br>
-   <img src="README-img/git-push.PNG" height="25" title="push changes to the main repository"><br>
+<h2>git clone https://github.com/BrunelCS/cs2001-coursework-2016-17-level-2-team-14.git GroupProject</h2>
+
+NOTE: "GroupProject" names the repository to whatever you want but I named it GroupProject.
+
+<b> How add the changes and files to github? </b>
+
+<h2>STEP 1: git add -A </h2>
+
+NOTE: -A means add all changes
+
+<h2> STEP 2: git commit -m "Message goes here" </h2>
+
+NOTE: -m means message
+
+<h2> STEP 3: git push </h2>
+
+<b> How to retrieve most up-to-date changes from github to the folder?</b>
+
+<h2> git pull </h2>
+
+
+
