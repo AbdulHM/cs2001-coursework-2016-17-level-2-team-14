@@ -15,15 +15,85 @@
         android:layout_marginBottom="16dp"
         android:layout_gravity="center"
         android:text="Welcome"/>
-    
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="16dp"
-        android:background="#FF0000"
-        android:textColor="@android:color/white"
-        android:textAllCaps="false"
-        android:text="Search" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Search" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Cuisines" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="My Recipes" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="My Favourites" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="My Profile" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="#FF0000"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Shopping List" />
+
+    </LinearLayout>
+
 
 
 </LinearLayout>
