@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="introColor1">#EF5350</color>
+    <color name="introColor2">#66BB6A</color>
+    <color name="introColor3">#FFCA28</color>
+
+    <color name="dot_color">#757575</color>
+
+    <array name="dot_active">
+        <item>@color/dot_color</item>
+        <item>@color/dot_color</item>
+        <item>@color/dot_color</item>
+    </array>
 </resources>
