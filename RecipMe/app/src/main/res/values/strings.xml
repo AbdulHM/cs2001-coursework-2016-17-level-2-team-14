@@ -19,11 +19,37 @@
     <string name="Dinner_Dishes">Dinner dishes</string>
     <string name="Welcome">Welcome</string>
     <string-array name="Difficulty">
-    <item> Very Easy</item>
-    <item> Easy</item>
-    <item> Medium</item>
-    <item> Hard </item>
-    <item> Very Hard</item>
-</string-array>
+        <item> Very Easy</item>
+        <item> Easy</item>
+        <item> Medium</item>
+        <item> Hard </item>
+        <item> Very Hard</item>
+    </string-array>
 
+    <string-array name="array_recipe">
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Chicken noodles</item>
+        <item>spaghetti</item>
+        <item>Magherita pizza</item>
+        <item>Catsu curry</item>
+        <item>firecracker noodles</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+        <item>Italian pasta</item>
+    </string-array>
 </resources>

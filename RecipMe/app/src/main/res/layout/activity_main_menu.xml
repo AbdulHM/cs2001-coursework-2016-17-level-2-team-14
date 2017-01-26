@@ -4,8 +4,8 @@
     android:id="@+id/activity_main_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="group14.brunel.recipme.MainMenu">
+    android:orientation="vertical">
+    <!--tools:context="group14.brunel.recipme.MainMenu"-->
 
     <TextView
         android:layout_width="wrap_content"
