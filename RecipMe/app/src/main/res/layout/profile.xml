@@ -11,6 +11,7 @@
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:src="@drawable/cover_photo"
             android:scaleType="centerCrop"/>
 
         <ImageView
@@ -22,6 +23,7 @@
             android:layout_marginTop="-60dp"
             android:elevation="5dp"
             android:padding="10dp"
+            android:src="@drawable/profile_photo"
             android:scaleType="centerCrop"/>
 
         <RelativeLayout

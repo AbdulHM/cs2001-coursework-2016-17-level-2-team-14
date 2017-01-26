@@ -1,5 +1,4 @@
 package group14.brunel.recipme;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -11,7 +10,6 @@ import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
