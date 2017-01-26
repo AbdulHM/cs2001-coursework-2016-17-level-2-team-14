@@ -35,8 +35,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void CreateAccount (View view) {
-        Intent register = new Intent(this,
-                Register.class);
+        Intent register = new Intent(this, Register.class);
         startActivity(register);
     }
 

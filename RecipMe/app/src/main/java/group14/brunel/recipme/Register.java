@@ -1,8 +1,7 @@
 package group14.brunel.recipme;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
 public class Register extends AppCompatActivity {
 
@@ -12,6 +11,6 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
 
-    public void SignUpButton(View view) {
-    }
+//    public void SignUpButton(View view) {
+//    }
 }

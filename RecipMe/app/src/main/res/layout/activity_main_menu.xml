@@ -29,7 +29,8 @@
             android:background="#FF0000"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Search" />
+            android:text="Search"
+            android:onClick="StartSearch"/>
 
         <Button
             android:layout_width="120dp"
@@ -81,7 +82,8 @@
             android:background="#FF0000"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="My Profile" />
+            android:text="My Profile"
+            android:onClick="StartProfile"/>
 
         <Button
             android:layout_width="120dp"

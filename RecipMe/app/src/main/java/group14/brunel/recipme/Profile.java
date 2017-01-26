@@ -4,20 +4,26 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by jayalam on 26/01/2017.
+ */
+
+public class Profile extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.profile);
+//        getActionBar().setDisplayShowTitleEnabled(false);
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 //        ListView lv = (ListView)findViewById(R.id.listViewRecipe);
 //        ArrayList<String> arrayRecipes = new ArrayList<>();
 //        arrayRecipes.addAll(Arrays.asList(getResources().getStringArray(R.array.array_recipe)));
 //
 //        adapter = new ArrayAdapter<>(
-//                MainActivity.this,
+//                Profile.this,
 //                android.R.layout.simple_list_item_1,
 //                arrayRecipes);
 //        lv.setAdapter(adapter);
@@ -47,5 +53,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //        return super.onCreateOptionsMenu(menu);
 //    }
-}
 
+
+}
