@@ -1,9 +1,16 @@
 package group14.brunel.recipme;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+<<<<<<< HEAD
 
+=======
+import android.widget.ListView;
+import android.widget.SearchView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+>>>>>>> 7241b9e7476d142d4fa015b2fbf1ce576ec834d5
 public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
