@@ -67,7 +67,9 @@
                 android:text="About"
                 android:textColor="#000000"
                 android:id="@+id/aboutField"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+
                 />
 
             <LinearLayout
