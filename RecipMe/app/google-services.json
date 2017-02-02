@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "524610811283",
+    "firebase_url": "https://recipme-6db76.firebaseio.com",
+    "project_id": "recipme-6db76",
+    "storage_bucket": "recipme-6db76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524610811283:android:1852358fcec6f37d",
+        "android_client_info": {
+          "package_name": "com.recipme.recipme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524610811283-l4f3k7lc64c0lf6qeelou5go12dif7gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNTE5vJVj4KhE5xnF4u6yrgKYAJpUYZCc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524610811283-l4f3k7lc64c0lf6qeelou5go12dif7gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

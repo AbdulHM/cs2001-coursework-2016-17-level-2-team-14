@@ -1,33 +1,43 @@
 package group14.brunel.recipme;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
-<<<<<<< HEAD
 
-=======
-import android.widget.ListView;
-import android.widget.SearchView;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-import java.util.ArrayList;
-import java.util.Arrays;
->>>>>>> 7241b9e7476d142d4fa015b2fbf1ce576ec834d5
 public class MainActivity extends AppCompatActivity {
 
-    ArrayAdapter<String> adapter;
+    private String mUsername;
+    private String mPhotoUrl;
+    public static final String ANONYMOUS = "anonymous";
+    private GoogleApiClient mGoogleApiClient;
+
+    // Firebase instance variables
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
-//        ListView lv = (ListView)findViewById(R.id.listViewRecipe);
-//        ArrayList<String> arrayRecipes = new ArrayList<>();
-//        arrayRecipes.addAll(Arrays.asList(getResources().getStringArray(R.array.array_recipe)));
-//
-//        adapter = new ArrayAdapter<>(
-//                MainActivity.this,
-//                android.R.layout.simple_list_item_1,
-//                arrayRecipes);
-//        lv.setAdapter(adapter);
+        // Set default username is anonymous
+        mUsername = ANONYMOUS;
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        if(mFirebaseUser == null) {
+            startActivity(new Intent(this, Login.class));
+            finish();
+            return;
+        } else {
+            mUsername = mFirebaseUser.getDisplayName();
+            if(mFirebaseUser.getPhotoUrl() != null) {
+                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
+            }
+        }
     }
 
 //    @Override
