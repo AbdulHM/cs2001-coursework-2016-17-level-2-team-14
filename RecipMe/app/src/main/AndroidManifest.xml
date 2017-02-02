@@ -2,34 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="group14.brunel.recipme">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".Login"
             android:theme="@style/RemoveActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".Register">
 
+            <!-- android:theme="@style/RemoveActionBar"> -->
+        </activity>
         <activity
-            android:name=".MainMenu">
-        </activity>
-
-        <activity
-            android:name=".Register">
-            <!--android:theme="@style/RemoveActionBar">-->
-        </activity>
-
-        <activity android:name=".Profile"
-            android:parentActivityName=".MainMenu">
-        </activity>
-        <activity android:name=".Search"></activity>
+            android:name=".Profile"
+            android:parentActivityName=".MainMenu" />
+        <activity android:name=".Search" />
+        <activity android:name=".UserCreatedRecipes" />
     </application>
 
 </manifest>
