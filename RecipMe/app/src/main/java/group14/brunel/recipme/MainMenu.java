@@ -2,6 +2,7 @@ package group14.brunel.recipme;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,15 +13,38 @@ public class MainMenu extends AppCompatActivity {
 
     private Button mSignOutBtn;
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-//        mAuth = FirebaseApp.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser() == null){
+                    startActivity(new Intent(MainMenu.this, Login.class));
+                }
+            }
+        };
 
         mSignOutBtn = (Button) findViewById(R.id.sign_out);
+
+        mSignOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)     {
+                mAuth.signOut();
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     public void StartSearch (View view) {
