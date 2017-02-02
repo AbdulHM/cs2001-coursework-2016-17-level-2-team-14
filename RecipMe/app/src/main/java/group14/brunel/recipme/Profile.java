@@ -16,6 +16,9 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
+
+    }
+
 //        getActionBar().setDisplayShowTitleEnabled(false);
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 //        ListView lv = (ListView)findViewById(R.id.listViewRecipe);

@@ -28,32 +28,33 @@ import com.google.firebase.auth.GoogleAuthProvider;
  */
 
 public class Login extends AppCompatActivity {
-
+    //Sign in button initialisations
     private SignInButton mGoogleBtn;
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 1;
-
+    //Firebase initialisations
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-
+    //Login button string
     private static final String TAG = "Login";
 
+    //Clearly this has to be here
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        //Storing in firebase?
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(Login.this, MainMenu.class));
+                if(firebaseAuth.getCurrentUser() != null) { //if user is added in database
+                    startActivity(new Intent(Login.this, MainMenu.class)); //go to menu
                 }
             }
         };
 
-        mGoogleBtn = (SignInButton) findViewById(R.id.google_sign_in);
+        mGoogleBtn = (SignInButton) findViewById(R.id.google_sign_in); //sign in button
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
