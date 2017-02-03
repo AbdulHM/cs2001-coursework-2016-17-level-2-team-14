@@ -70,14 +70,17 @@
             android:hint="@string/date_of_birth"/>
 
         <Button
-            android:id="@+id/register_button"
+            android:id="@+id/buttonSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:layout_gravity="center"
             android:textAllCaps="false"
-            android:text="@string/sign_up"
-            android:onClick="SignUpButton"/>
+            android:text="@string/sign_up"/>
+            <!---
+            android:onClick="SignUpButton"
+            -->
+
 
     </LinearLayout>
 
