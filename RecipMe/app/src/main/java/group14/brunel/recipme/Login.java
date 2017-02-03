@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,11 +24,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-/**
- * Created by jayalam on 06/01/2017.
- */
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements View.OnClickListener {
     //Sign in button initialisations
     private SignInButton mGoogleBtn;
     private GoogleApiClient mGoogleApiClient;
@@ -37,6 +35,7 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     //Login button string
     private static final String TAG = "Login";
+    private Button signIn;
 
     //Clearly this has to be here
     @Override
@@ -129,6 +128,10 @@ public class Login extends AppCompatActivity {
                         // ...
                     }
                 });
+
+        signIn = (Button) findViewById(R.id.SignIn_button);
+        signIn.setOnClickListener(this);
+
     }
 
     public void LoginButton (View view) {
@@ -141,14 +144,22 @@ public class Login extends AppCompatActivity {
         // Check to see if the method retrieves the data from the editText
         Log.v("Login", username + " " + password);
 
-        Intent menu = new Intent(this,
-                MainMenu.class);
+        Intent menu = new Intent(this,MainMenu.class);
         startActivity(menu);
     }
 
-    public void CreateAccount (View view) {
-        Intent register = new Intent(this, Register.class);
-        startActivity(register);
+//    public void CreateAccount (View view) {
+//        Intent register = new Intent(this, Register.class);
+//        startActivity(register);
+//    }
+
+    public void onClick (View v){
+
+        if (v == signIn) {
+            Intent register = new Intent(this, Register.class);
+            startActivity(register);
+        }
+
     }
 
 

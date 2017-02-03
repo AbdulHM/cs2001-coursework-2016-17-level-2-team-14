@@ -57,11 +57,12 @@
         android:layout_gravity="center"
         android:text="@string/login_need_an_account"/>
 
-    <TextView
+    <Button
+        android:id="@+id/SignIn_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="48dp"
+        android:layout_marginLeft="75dp"
         android:text="@string/login_create_an_account_now"
         android:onClick="CreateAccount"/>
 
