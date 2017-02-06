@@ -9,6 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CreateRecipe" />
         <activity
             android:name=".Login"
             android:theme="@style/RemoveActionBar">
@@ -28,6 +29,7 @@
             android:parentActivityName=".MainMenu" />
         <activity android:name=".Search" />
         <activity android:name=".UserCreatedRecipes" />
+        <activity android:name=".Home"/>
     </application>
 
 </manifest>

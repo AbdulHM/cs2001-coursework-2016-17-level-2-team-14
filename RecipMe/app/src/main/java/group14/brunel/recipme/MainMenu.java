@@ -54,8 +54,8 @@ public class MainMenu extends AppCompatActivity {
 
 
     public void StartCuisines (View view) {
-        Intent cuisines = new Intent(this, Profile.class);
-//        startActivity(cuisines);
+        Intent cuisines = new Intent(this, CreateRecipe.class);
+        startActivity(cuisines);
     }
 
     public void StartMyRecipes (View view) {

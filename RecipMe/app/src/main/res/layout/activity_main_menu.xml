@@ -39,7 +39,8 @@
             android:background="#FF0000"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Cuisines" />
+            android:text="Cuisines"
+            android:onClick="StartCuisines"/>
 
     </LinearLayout>
 

@@ -144,7 +144,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         // Check to see if the method retrieves the data from the editText
         Log.v("Login", username + " " + password);
 
-        Intent menu = new Intent(this,MainMenu.class);
+        Intent menu = new Intent(this, MainMenu.class);
         startActivity(menu);
     }
 
