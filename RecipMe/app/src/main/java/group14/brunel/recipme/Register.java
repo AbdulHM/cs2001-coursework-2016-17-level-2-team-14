@@ -1,89 +1,99 @@
 package group14.brunel.recipme;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.app.ProgressDialog;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-import static group14.brunel.recipme.R.id.buttonSave;
+//import group14.brunel.recipme.R;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
-    //public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //defining view objects
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+    private Button buttonSignup;
+    private ProgressDialog progressDialog;
+
+
+    //defining firebaseauth object
     private FirebaseAuth firebaseAuth;
-
-    private TextView textViewUserEmail;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-
-    private DatabaseReference databaseReference;
-    //This lets us store data in firebase
-
-    private EditText editTextName, editTextAddress;
-    private Button buttonSave;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        //Initializing firebase authentication object
+        //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //If the user is not logged in
-        //That means current usr will return null
-        if (firebaseAuth.getCurrentUser() ==null) {
-            //Closing this activity
-            finish();
-            //Starting Login Activity
-            startActivity(new Intent(this, Login.class));
+        //initializing views
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+
+        buttonSignup = (Button) findViewById(R.id.buttonSignup);
+
+        progressDialog = new ProgressDialog(this);
+
+        //attaching listener to button
+        buttonSignup.setOnClickListener(this);
+    }
+
+    private void registerUser(){
+
+        //getting email and password from edit texts
+        String email = editTextEmail.getText().toString().trim();
+        String password  = editTextPassword.getText().toString().trim();
+
+        //checking if email and passwords are empty
+        if(TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
+            return;
         }
 
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+        if(TextUtils.isEmpty(password)){
+            Toast.makeText(this,"Please enter password",Toast.LENGTH_LONG).show();
+            return;
+        }
 
-        editTextAddress = (EditText) findViewById(R.id.register_email);
-        editTextName = (EditText) findViewById(R.id.register_username);
-        buttonSave = (Button) findViewById(R.id.buttonSave);
+        //if the email and password are not empty
+        //displaying a progress dialog
 
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.show();
 
-        //initializing views
-        //(Add in the code if you want it to display the email address and what not
-        //Logout button?
-
-        buttonSave.setOnClickListener(this);
-
-    }
-
-    private void saveUserInformation(){
-
-    String name = editTextName.getText().toString().trim();
-    String add = editTextAddress.getText().toString().trim();
-
-        UserInformation usernInformation = new UserInformation(name, add);
-
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        databaseReference.child(user.getUid()).setValue(usernInformation);
-
-        Toast.makeText(this, "Info Saved", Toast.LENGTH_LONG).show();
-
-    }
-    public void onClick (View v){
-        if(v == buttonSave){
-            saveUserInformation();
+        //creating a new user
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        //checking if success
+                        if(task.isSuccessful()){
+                            //display some message here
+                            Toast.makeText(Register.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                        }else{
+                            //display some message here
+                            Toast.makeText(Register.this,"Registration Error",Toast.LENGTH_LONG).show();
+                        }
+                        progressDialog.dismiss();
+                    }
+                });
 
     }
 
+    @Override
+    public void onClick(View view) {
+        //calling register method on click
+        registerUser();
     }
-
 }

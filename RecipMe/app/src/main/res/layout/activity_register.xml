@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
 
     <LinearLayout
-        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -25,63 +32,28 @@
             android:src="@drawable/logo" />
 
         <EditText
-            android:id="@+id/register_username"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:hint="@string/register_username"/>
+            android:layout_margin="15dp"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/register_email"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:inputType="textPassword"
-            android:hint="@string/email"/>
-
-        <EditText
-            android:id="@+id/register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:inputType="textPassword"
-            android:hint="@string/password"/>
-
-        <EditText
-            android:id="@+id/register_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:inputType="textPassword"
-            android:hint="@string/confirm_password"/>
-
-        <EditText
-            android:id="@+id/register_date_of_birth"
-            android:inputType="date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:layout_marginBottom="16dp"
-            android:hint="@string/date_of_birth"/>
+            android:layout_margin="15dp"
+            android:hint="Enter password"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonSave"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonSignup"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:layout_gravity="center"
-            android:textAllCaps="false"
-            android:text="@string/sign_up"/>
-            <!---
-            android:onClick="SignUpButton"
-            -->
-
+            android:layout_margin="15dp"
+            android:text="Sign Up" />
 
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>
