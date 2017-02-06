@@ -52,7 +52,14 @@
         <item>Italian pasta</item>
         <item>Italian pasta</item>
     </string-array>
-    <string name="title_activity_main2">Main2Activity</string>
+
+    <string-array name="menu_titles_array">
+        <item>My Profile</item>
+        <item>My Recipes</item>
+        <item>Settings</item>
+        <item>Sign out</item>
+    </string-array>
+
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -61,5 +68,7 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="title_activity_nav_menu">NavMenu</string>
+    <string name="app_not_available">app not available</string>
 
 </resources>
