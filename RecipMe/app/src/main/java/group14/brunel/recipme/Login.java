@@ -1,5 +1,6 @@
 package group14.brunel.recipme;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,36 +27,42 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
-    //Sign in button initialisations
+
+    //Google Initialisations
     private SignInButton mGoogleBtn;
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 1;
-    //Firebase initialisations
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth; //Also used for App login
     private FirebaseAuth.AuthStateListener mAuthListener;
-    //Login button string
     private static final String TAG = "Login";
     private Button signIn;
+    //______________________
 
-    //Clearly this has to be here
+    //App Login Initialisations
+    private EditText txtEmailLogin;
+    private EditText txtPwd;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //Storing in firebase?
+        txtEmailLogin  = (EditText) findViewById(R.id.txtEmailLogin);
+        txtPwd = (EditText)  findViewById(R.id.txtPasswordLogin);
+
         mAuth = FirebaseAuth.getInstance();
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() != null) { //if user is added in database
-                    startActivity(new Intent(Login.this, MainMenu.class)); //go to menu
+                if(firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(Login.this, MainMenu.class));
                 }
             }
         };
 
-        mGoogleBtn = (SignInButton) findViewById(R.id.google_sign_in); //sign in button
+        mGoogleBtn = (SignInButton) findViewById(R.id.google_sign_in);
 
-        // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -134,24 +141,29 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    public void LoginButton (View view) {
-        EditText editTextUsername = (EditText) findViewById(R.id.login_username);
-        String username = editTextUsername.getText().toString();
+    public void btnUserLogin_Click (View view) {
 
-        EditText editTextPassword = (EditText) findViewById(R.id.login_password);
-        String password = editTextPassword.getText().toString();
+        final ProgressDialog progressDialog = ProgressDialog.show(Login.this, "Please wait...", "Processing...", true);
+        mAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPwd.getText().toString())
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
 
-        // Check to see if the method retrieves the data from the editText
-        Log.v("Login", username + " " + password);
+                        if (task.isSuccessful()){
+                            Toast.makeText(Login.this, "Login successful", Toast.LENGTH_LONG).show();
+                            //Have to link specific user to their own menu and profile etc..
+                        } else {
+                            Log.e("ERROR", task.getException().toString());
+                            Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
 
         Intent menu = new Intent(this, MainMenu.class);
         startActivity(menu);
-    }
 
-//    public void CreateAccount (View view) {
-//        Intent register = new Intent(this, Register.class);
-//        startActivity(register);
-//    }
+    }
 
     public void onClick (View v){
 
